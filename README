@@ -4,7 +4,7 @@ I'll make the script completely automated if people start asking for it.
 
 
 Run the script on your target:
-wscript pshell3.vbs //B //Nologo
+wscript PSHUpdater.vbs //B //Nologo
 
 Next, install quietly without user interaction:
 wusa pshell3.msu /quiet /norestart
