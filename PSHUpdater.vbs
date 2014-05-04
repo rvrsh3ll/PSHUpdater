@@ -12,7 +12,7 @@ If objFSO.FolderExists(strWindir & "\syswow64") Then
       Else
      strOSArchitecture_Windir = "x86"
   End If
-wscript.echo strOSArchitecture_Windir  
+'wscript.echo strOSArchitecture_Windir  
 Set shell = CreateObject ("Wscript.Shell")
 Set getOSVersion = shell.exec("%comspec% /c ver")
 version = getOSVersion.stdout.readall
@@ -41,12 +41,12 @@ Function Download ( ByRef strUrl, ByRef strDestPath, ByRef overwrite )
 
     ' if the file exists already, and we're not overwriting, quit now
     If Not overwrite And objFSO.FileExists(strDestPath) Then
-        WScript.Echo "Already exists - " & strDestPath
+       ' WScript.Echo "Already exists - " & strDestPath
         Download = True
         Exit Function
     End If
 
-    WScript.Echo "Downloading " & strUrl & " to " & strDestPath
+   ' WScript.Echo "Downloading " & strUrl & " to " & strDestPath
 
     ' Fetch the file
     ' need to use ServerXMLHTTP so can set timeouts for downloading large files
@@ -77,7 +77,7 @@ Function Download ( ByRef strUrl, ByRef strDestPath, ByRef overwrite )
     Set objXMLHTTP = Nothing
     Set objFSO = Nothing
 
-    WScript.Echo "Status code: " & intStatusCode & VBNewLine 
+    'WScript.Echo "Status code: " & intStatusCode & VBNewLine 
 
     If intStatusCode = 200 Then
         Download = True
