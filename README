@@ -1,0 +1,20 @@
+Requires the target system have Microsoft .Net Framework 4.0 or greater.
+I will be adding the feature to check the target system and install silently soon.
+I'll make the script completely automated if people start asking for it.
+
+
+Run the script on your target:
+wscript pshell3.vbs //B //Nologo
+
+Next, install quietly without user interaction:
+wusa pshell3.msu /quiet /norestart
+
+The install will take a few minutes depending on the target. I haven't tested enough yet but, I believe
+it requires a reboot.
+
+Check Version from command-line
+powershell $PSVersionTable
+
+Thanks to @samuel337 for the code to bypass limits on downloading large files. 
+
+Follow me @424f424f
