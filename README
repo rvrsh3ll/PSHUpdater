@@ -1,4 +1,4 @@
-Requires the target system have Microsoft .Net Framework 4.0 or greater.
+Requires administrator priviledges and that the target system have Microsoft .Net Framework 4.0 or greater.
 I will be adding the feature to check the target system and install silently soon.
 I'll make the script completely automated if people start asking for it.
 
