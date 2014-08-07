@@ -5,7 +5,7 @@ Dim objShell      	: Set objShell      = CreateObject("Wscript.Shell")
 Dim strWindir     	: strWinDir         = objShell.ExpandEnvironmentStrings("%WinDir%")
 Dim strUrl, getOSVersion, version, OSVer, shell
 Public strDestPath, overwrite
-strDestPath= "C:\test\pshell3.msu"
+strDestPath= "pshell3.msu"
 overwrite = True
 If objFSO.FolderExists(strWindir & "\syswow64") Then
      strOSArchitecture_Windir = "x64"
